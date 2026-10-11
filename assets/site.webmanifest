@@ -3,8 +3,8 @@
   "short_name": "Gemini Remover",
   "description": "Free, 100% private client-side tool to remove Google Gemini and Veo 3 AI watermarks from images and videos.",
   "id": "/gemini-watermark-remover/",
-  "start_url": "https://watermark.devdeskapp.com/",
-  "scope": "https://watermark.devdeskapp.com/",
+  "start_url": "https://gemini-watermark-remover.devdeskapp.com/",
+  "scope": "https://gemini-watermark-remover.devdeskapp.com/",
   "categories": ["utilities", "photo", "video"],
   "icons": [
     {

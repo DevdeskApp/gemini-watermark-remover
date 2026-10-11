@@ -2072,3 +2072,41 @@ function initCustomSelects() {
     document.querySelectorAll('.custom-select.open').forEach((s) => s.classList.remove('open'));
   });
 }
+
+
+// ── Dark / Light Theme Toggle (WaterEjector Style) ──
+function setupThemeToggle() {
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  if (!themeToggleBtn) return;
+
+  function updateThemeUI(theme) {
+    const sun = themeToggleBtn.querySelector('.sun-icon');
+    const moon = themeToggleBtn.querySelector('.moon-icon');
+    if (!sun || !moon) return;
+
+    if (theme === 'dark') {
+      sun.style.display = 'none';
+      moon.style.display = 'block';
+      themeToggleBtn.setAttribute('title', 'Switch to Light Mode');
+    } else {
+      sun.style.display = 'block';
+      moon.style.display = 'none';
+      themeToggleBtn.setAttribute('title', 'Switch to Dark Mode');
+    }
+  }
+
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+  updateThemeUI(currentTheme);
+
+  themeToggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const active = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', active);
+    localStorage.setItem('theme', active);
+    updateThemeUI(active);
+  });
+}
+
+
+document.addEventListener('DOMContentLoaded', setupThemeToggle);
+setupThemeToggle();
