@@ -227,6 +227,7 @@ def run_tests():
     key_assets = [
         "assets/bg1.webp", "assets/bg2.webp", "assets/bg_96.png", "assets/bg_48.png",
         "assets/logo.webp", "assets/favicon.ico", "assets/favicon.svg",
+        "favicon.ico", "favicon.svg", "favicon-96x96.png", "apple-touch-icon.png",
         "assets/gemini-watermark-remover-before.webp",
         "assets/gemini-watermark-remover-after.webp",
         "assets/gemini-watermark-remover-preview-left.webp",
