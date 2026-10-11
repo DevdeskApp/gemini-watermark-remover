@@ -19,7 +19,8 @@ def run_tests():
         "index.html", "about.html", "contact.html", "disclaimer.html",
         "privacy-policy.html", "terms-of-service.html",
         "style.css", "main.js", "sw.js", "ads.txt", "robots.txt", "sitemap.xml",
-        "CNAME", "googlec621a4d35c484e60.html"
+        "CNAME", "googlec621a4d35c484e60.html",
+        "llms.txt", "llm.txt", "llms-full.txt", "full.llm"
     ]
     print("\n[1] Checking Essential Root Files...")
     for rf in required_files:

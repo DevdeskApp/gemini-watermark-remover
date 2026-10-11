@@ -1,0 +1,30 @@
+# Gemini Watermark Remover
+
+> Free online browser tool to remove Gemini watermark from video (Google Flow, Gemini Omni, Veo 3) and erase sparkle logos from Gemini & Nano Banana AI images using lossless mathematical alpha unblending.
+
+Gemini Watermark Remover provides high-speed, 100% client-side watermark removal for AI-generated media. Unlike destructive generative inpainting or blurry diffusion brush tools, our engine mathematically reverses transparent watermark compositing pixel-by-pixel, preserving 100% original texture, crispness, and color fidelity with zero blur.
+
+## Core Features & AI Tools
+
+- [Gemini Watermark Remover Home](https://gemini-watermark-remover.devdeskapp.com/): Instant mathematical alpha unblending for Google Gemini Imagen 3 photos, Nano Banana illustrations, and chat generations.
+- [Gemini Video Watermark Remover](https://gemini-watermark-remover.devdeskapp.com/#panel-video): Frame-by-frame hardware-accelerated watermark removal for Google Flow, Gemini Omni, and Veo 3 video clips with full audio track preservation.
+- [How It Works](https://gemini-watermark-remover.devdeskapp.com/#how-it-works): Comprehensive breakdown of Google's transparent sparkle watermark mask, mathematical unblending formulas, and difference from blurry AI inpainting.
+- [Watermark Removal FAQ](https://gemini-watermark-remover.devdeskapp.com/#faq): In-depth answers regarding Gemini watermark settings, Veo video processing speed, SynthID metadata integrity, and commercial usage rights.
+
+## Documentation & Legal Transparency
+
+- [About Us](https://gemini-watermark-remover.devdeskapp.com/about.html): Background details on DevDeskApp engineering, unblending algorithms, and our zero-data-collection philosophy.
+- [Contact Support](https://gemini-watermark-remover.devdeskapp.com/contact.html): Technical inquiries, bug reporting, feature suggestions, and community support.
+- [Privacy Policy](https://gemini-watermark-remover.devdeskapp.com/privacy-policy.html): Complete privacy guarantee detailing local WebAssembly and Web Worker processing with zero remote uploads or server tracking.
+- [Terms of Service](https://gemini-watermark-remover.devdeskapp.com/terms-of-service.html): Usage terms, ownership confirmation of user creations, and open-source platform conditions.
+- [Disclaimer](https://gemini-watermark-remover.devdeskapp.com/disclaimer.html): Independent third-party tool declaration unaffiliated with Google LLC, Alphabet Inc., or DeepMind.
+
+## Related DevDeskApp Utilities
+
+- [WaterEjector Online](https://waterejector.devdeskapp.com/): Free 165Hz acoustic speaker cleaner and water eject tool for smartphones and smartwatches.
+- [Deep Clean Dust Remover](https://waterejector.devdeskapp.com/deep-clean/): Low-frequency sound sweep to clear clogged speaker grilles.
+- [Speaker Rescue Arcade Game](https://waterejector.devdeskapp.com/game/): Interactive acoustic sound game simulating water droplet ejection physics.
+
+## Full Context
+
+- [Full Content Digest](https://gemini-watermark-remover.devdeskapp.com/llms-full.txt): Complete consolidated plain-text knowledge base, mathematical specifications, and unblending algorithms for deep LLM ingestion and AI search agents.

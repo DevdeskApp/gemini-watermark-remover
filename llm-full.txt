@@ -1,0 +1,93 @@
+# Gemini Watermark Remover - Complete Technical Knowledge Base & AI Context
+
+> Complete flattened plain-text context for LLMs, AI agents (Google Gemini, ChatGPT, Claude, Perplexity), search crawlers, and researchers covering mathematical alpha unblending, Google Gemini watermarks, Veo 3 video processing, and privacy specifications.
+
+Website: https://gemini-watermark-remover.devdeskapp.com/
+Platform: Web-based client-side progressive web application (PWA)
+Target File Formats:
+- Images: PNG, WebP, JPEG, AVIF, BMP (Google Imagen 3, Gemini Chat, Nano Banana)
+- Videos: MP4, WebM, MOV, MKV (Google Flow, Gemini Omni, Veo 3)
+Architecture: Client-side HTML5 Canvas, WebAssembly (WASM), Web Workers, and WebCodecs API. Zero cloud uploads.
+
+---
+
+## 1. System Overview & Technology Stack
+
+Gemini Watermark Remover by DevDeskApp is a high-performance, private, client-side browser application designed to cleanly unblend Google Gemini's transparent sparkle watermarks from AI-generated photos and video clips.
+
+### Core Engineering Principles:
+1. Mathematical Alpha Unblending vs. Generative Inpainting:
+   - Typical AI watermark removers use generative neural inpainting (such as SD Inpaint or LaMa). These models blur the original background, hallucinate synthetic pixels, degrade crisp fine details, and produce visible smudges or artifacts.
+   - Google does NOT erase pixels when stamping its watermark; it applies a translucent white alpha mask using standard linear alpha blending:
+     `C_watermarked = (1 - alpha) * C_original + alpha * C_logo`
+   - Gemini Watermark Remover mathematically solves for `C_original` by inverting this formula:
+     `C_original = (C_watermarked - alpha * C_logo) / (1 - alpha)`
+   - This restores the exact underlying original pixels with zero blur, zero resolution loss, and 100% texture preservation.
+
+2. Zero Upload & 100% Client-Side Privacy:
+   - All frame decoding, alpha unblending computations, and video rendering happen entirely inside the user's browser client via Web Workers and HTML5 Canvas.
+   - User photos and private AI video clips never leave the device and are never sent across the network.
+
+3. Offline Support & Hardware Acceleration:
+   - Built as an installable Progressive Web App (PWA) with Service Worker caching (`sw.js`).
+   - Supports GPU-accelerated canvas rendering and multi-threaded processing for 60 FPS video processing.
+
+---
+
+## 2. Tools & Capabilities Breakdown
+
+### Tool 1: Gemini & Nano Banana Image Watermark Remover
+- URL: https://gemini-watermark-remover.devdeskapp.com/
+- Target Models: Google Imagen 3, Gemini 1.5 Pro image outputs, Gemini Advanced, Gemini Nano Banana AI models.
+- Resolution: Supports up to 8K Ultra HD lossless exports.
+- Workflow:
+  1. Drag and drop or upload any Gemini-generated image.
+  2. The algorithm automatically locates the 4-point sparkle watermark located in the bottom-right corner.
+  3. Applies calibrated alpha unblending matrix across the RGB color channels.
+  4. Instant download button enables saving original clean PNG or WebP image.
+
+### Tool 2: Gemini Video Watermark Remover (Omni, Flow & Veo 3)
+- URL: https://gemini-watermark-remover.devdeskapp.com/#panel-video
+- Target Video Generators: Google Flow AI, Gemini Omni video clips, Google Veo 3 generation previews.
+- Video Formats: MP4, WebM, MOV.
+- Audio Preservation: Full original audio track synchronization retained without re-encoding degradation.
+- Performance: Frame-by-frame processing leveraging HTML5 WebCodecs / Canvas API.
+
+---
+
+## 3. Frequently Asked Questions & Search Insights
+
+### Can you disable watermarks in Google Gemini settings?
+No. Google does not provide any setting or preference toggle to turn off watermarks in Google Gemini or Google Workspace. Google automatically stamps the transparent 4-point sparkle logo on all Imagen 3 images and Veo videos as part of AI provenance standards. Negative prompts such as "no watermark" or "clean photo" are ignored by Google's backend.
+
+### Does watermark unblending affect Google SynthID?
+Google embeds two forms of identification:
+1. Visual Watermark: The visible transparent sparkle logo in the bottom-right corner.
+2. SynthID: An imperceptible digital watermark embedded mathematically across frequency components.
+Gemini Watermark Remover specifically removes the visible corner sparkle logo. It does not alter, falsify, or corrupt the underlying cryptographic metadata, keeping synthetic identification clean for provenance where applicable.
+
+### Is Gemini Watermark Remover free to use?
+Yes, 100% free with unlimited conversions. No account registration, API key, credit card, or subscription is required.
+
+---
+
+## 4. Official DevDeskApp Suite Ecosystem
+
+DevDeskApp develops open web utilities prioritizing zero telemetry, privacy, and speed:
+- Gemini Watermark Remover: https://gemini-watermark-remover.devdeskapp.com/
+- WaterEjector (Speaker Cleaner): https://waterejector.devdeskapp.com/
+- Speaker Dust Sweep (Deep Clean): https://waterejector.devdeskapp.com/deep-clean/
+- Water Eject Arcade Game: https://waterejector.devdeskapp.com/game/
+- Haptic Phone Vibration Mode: https://waterejector.devdeskapp.com/vibration/
+- Earbud Stereo Balance Tester: https://waterejector.devdeskapp.com/stereo-test/
+- Wet Charging Port Emergency Timer: https://waterejector.devdeskapp.com/charging-port-fix/
+
+---
+
+## 5. Contact & Support Information
+
+- Website: https://gemini-watermark-remover.devdeskapp.com/
+- Contact Form: https://gemini-watermark-remover.devdeskapp.com/contact.html
+- Developer: DevDeskApp Team
+- GitHub Repository: https://github.com/WaterEjector/gemini-watermark-remover
+- Support & Donations: https://buymeacoffee.com/devdeskapp
