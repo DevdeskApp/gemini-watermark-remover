@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# LLM & AI Agent Contexts
+# https://gemini-watermark-remover.devdeskapp.com/llms.txt
+# https://gemini-watermark-remover.devdeskapp.com/llms-full.txt
+
 Sitemap: https://gemini-watermark-remover.devdeskapp.com/sitemap.xml
+
