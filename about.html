@@ -42,7 +42,13 @@
   <meta property="og:title" content="About Us – Gemini Watermark Remover" />
   <meta property="og:description"
     content="Learn about our mission to bring lossless, private, and mathematically sound media restoration to AI creators worldwide." />
-  <meta property="og:image" content="https://gemini-watermark-remover.devdeskapp.com/assets/gemini-watermark-remover-logo.webp" />
+  <meta property="og:image" content="https://gemini-watermark-remover.devdeskapp.com/assets/gemini-watermark-remover-og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:image" content="https://gemini-watermark-remover.devdeskapp.com/assets/gemini-watermark-remover-og.png" />
 
   <!-- Performance & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,11 +76,6 @@
         adScript.crossOrigin = 'anonymous';
         adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2136229145694242';
         document.head.appendChild(adScript);
-
-        var gtagScript = document.createElement('script');
-        gtagScript.async = true;
-        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-GJJ0XRV91T';
-        document.head.appendChild(gtagScript);
       }
 
       window.dataLayer = window.dataLayer || [];
@@ -106,7 +107,7 @@
     <!-- Top Navigation Header (WaterEjector Suite Style) -->
   <header class="app-header">
     <div class="header-container">
-      <a href="./index.html" class="brand" title="Gemini Watermark Remover by DevDeskApp">
+      <a href="/" class="brand" title="Gemini Watermark Remover by DevDeskApp">
         <img src="./assets/gemini-watermark-remover-logo.webp" alt="Gemini Watermark Remover Logo - DevDeskApp AI Image & Video Cleaner" width="38" height="38" decoding="async" fetchpriority="high" class="brand-logo-img" />
         <div class="brand-text">
           <span class="brand-title">Gemini Remover</span>
@@ -116,9 +117,9 @@
 
       <!-- Desktop Navigation Menu -->
       <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="./index.html" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Home</a>
 
-        <!-- Tools Dropdown (Live WaterEjector & Audio Suite) -->
+        <!-- Tools Dropdown -->
         <div class="nav-dropdown" id="tools-dropdown">
           <button type="button" class="nav-link nav-dropdown-btn" id="tools-dropdown-btn" aria-expanded="false" aria-haspopup="true">
             <span>Tools</span>
@@ -126,7 +127,7 @@
           </button>
           <div class="dropdown-menu" id="tools-dropdown-menu">
             <div class="dropdown-group-label">CURRENT AI TOOL</div>
-            <a href="./index.html" class="dropdown-item active-tool">
+            <a href="/" class="dropdown-item active-tool">
               <div class="dropdown-item-icon active-icon">
                 <iconify-icon icon="ph:sparkle-fill" width="18"></iconify-icon>
               </div>
@@ -140,7 +141,7 @@
             </a>
 
             <div class="dropdown-divider"></div>
-            <div class="dropdown-group-label">WATEREJECTOR &amp; AUDIO SUITE (LIVE)</div>
+            <div class="dropdown-group-label">DEV DESK APPS</div>
 
             <a href="https://waterejector.devdeskapp.com/" target="_blank" rel="noopener noreferrer" class="dropdown-item tool-we-item">
               <div class="dropdown-item-icon icon-water">
@@ -148,86 +149,20 @@
               </div>
               <div class="dropdown-item-content">
                 <div class="dropdown-item-title-row">
-                  <span class="dropdown-item-title">Water Eject (165Hz Cleaner)</span>
+                  <span class="dropdown-item-title">Water Ejector Suite ↗</span>
                   <span class="badge-live">Live Tool</span>
                 </div>
-                <p class="dropdown-item-desc">Eject trapped water with 165Hz pulsed bass tone.</p>
-              </div>
-              <iconify-icon icon="ph:arrow-square-out-bold" width="15" class="dropdown-ext-icon"></iconify-icon>
-            </a>
-
-            <a href="https://waterejector.devdeskapp.com/deep-clean/" target="_blank" rel="noopener noreferrer" class="dropdown-item tool-we-item">
-              <div class="dropdown-item-icon icon-dust">
-                <iconify-icon icon="ph:wind-bold" width="18"></iconify-icon>
-              </div>
-              <div class="dropdown-item-content">
-                <div class="dropdown-item-title-row">
-                  <span class="dropdown-item-title">Deep Clean (Dust Sweep)</span>
-                </div>
-                <p class="dropdown-item-desc">100Hz – 250Hz frequency sweep to clear speaker dust.</p>
-              </div>
-              <iconify-icon icon="ph:arrow-square-out-bold" width="15" class="dropdown-ext-icon"></iconify-icon>
-            </a>
-
-            <a href="https://waterejector.devdeskapp.com/game/" target="_blank" rel="noopener noreferrer" class="dropdown-item tool-we-item">
-              <div class="dropdown-item-icon icon-game">
-                <iconify-icon icon="ph:game-controller-bold" width="18"></iconify-icon>
-              </div>
-              <div class="dropdown-item-content">
-                <div class="dropdown-item-title-row">
-                  <span class="dropdown-item-title">Speaker Rescue Arcade</span>
-                  <span class="badge-game">Arcade Game</span>
-                </div>
-                <p class="dropdown-item-desc">Interactive sound ejection game with droplet physics.</p>
-              </div>
-              <iconify-icon icon="ph:arrow-square-out-bold" width="15" class="dropdown-ext-icon"></iconify-icon>
-            </a>
-
-            <a href="https://waterejector.devdeskapp.com/vibration/" target="_blank" rel="noopener noreferrer" class="dropdown-item tool-we-item">
-              <div class="dropdown-item-icon icon-vib">
-                <iconify-icon icon="ph:vibrate-bold" width="18"></iconify-icon>
-              </div>
-              <div class="dropdown-item-content">
-                <div class="dropdown-item-title-row">
-                  <span class="dropdown-item-title">Vibration Mode (80Hz)</span>
-                </div>
-                <p class="dropdown-item-desc">Navigator Haptic API pulses to mechanically shake droplets.</p>
-              </div>
-              <iconify-icon icon="ph:arrow-square-out-bold" width="15" class="dropdown-ext-icon"></iconify-icon>
-            </a>
-
-            <a href="https://waterejector.devdeskapp.com/stereo-test/" target="_blank" rel="noopener noreferrer" class="dropdown-item tool-we-item">
-              <div class="dropdown-item-icon icon-stereo">
-                <iconify-icon icon="ph:headphones-bold" width="18"></iconify-icon>
-              </div>
-              <div class="dropdown-item-content">
-                <div class="dropdown-item-title-row">
-                  <span class="dropdown-item-title">Stereo Balance Tester</span>
-                </div>
-                <p class="dropdown-item-desc">L/R audio panner diagnostic for earbuds &amp; phones.</p>
-              </div>
-              <iconify-icon icon="ph:arrow-square-out-bold" width="15" class="dropdown-ext-icon"></iconify-icon>
-            </a>
-
-            <a href="https://waterejector.devdeskapp.com/charging-port-fix/" target="_blank" rel="noopener noreferrer" class="dropdown-item tool-we-item">
-              <div class="dropdown-item-icon icon-port">
-                <iconify-icon icon="ph:lightning-slash-bold" width="18"></iconify-icon>
-              </div>
-              <div class="dropdown-item-content">
-                <div class="dropdown-item-title-row">
-                  <span class="dropdown-item-title">Wet Charging Port Fix</span>
-                </div>
-                <p class="dropdown-item-desc">Moisture detected resolution guide &amp; 30m air-dry timer.</p>
+                <p class="dropdown-item-desc">Speaker cleaner, sound frequencies &amp; audio tools.</p>
               </div>
               <iconify-icon icon="ph:arrow-square-out-bold" width="15" class="dropdown-ext-icon"></iconify-icon>
             </a>
           </div>
         </div>
 
-        <a href="./index.html#panel-video" class="nav-link" id="nav-link-video">Video Remover</a>
-        <a href="./index.html#how-it-works" class="nav-link">How it Works</a>
-        <a href="./index.html#faq" class="nav-link">FAQ</a>
-        <a href="./about.html" class="nav-link">About</a>
+        <a href="/#panel-video" class="nav-link" id="nav-link-video">Video Remover</a>
+        <a href="/#how-it-works" class="nav-link">How it Works</a>
+        <a href="/#faq" class="nav-link">FAQ</a>
+        <a href="./about.html" class="nav-link active">About</a>
         <a href="./contact.html" class="nav-link">Contact</a>
       </nav>
 
@@ -259,23 +194,23 @@
       <div id="header-actions" class="header-actions">
         <!-- Mobile Navigation Menu (visible inside mobile drawer) -->
         <div class="mobile-nav-links">
-          <a href="./index.html" class="mobile-nav-link">
+          <a href="/" class="mobile-nav-link">
             <iconify-icon icon="ph:house-bold" width="18"></iconify-icon>
             <span>Home</span>
           </a>
-          <a href="./index.html#panel-video" class="mobile-nav-link" id="mobile-nav-link-video">
+          <a href="/#panel-video" class="mobile-nav-link" id="mobile-nav-link-video">
             <iconify-icon icon="ph:video-bold" width="18"></iconify-icon>
             <span>Video Remover</span>
           </a>
-          <a href="./index.html#how-it-works" class="mobile-nav-link">
+          <a href="/#how-it-works" class="mobile-nav-link">
             <iconify-icon icon="ph:info-bold" width="18"></iconify-icon>
             <span>How it Works</span>
           </a>
-          <a href="./index.html#faq" class="mobile-nav-link">
+          <a href="/#faq" class="mobile-nav-link">
             <iconify-icon icon="ph:question-bold" width="18"></iconify-icon>
             <span>FAQ</span>
           </a>
-          <a href="./about.html" class="mobile-nav-link">
+          <a href="./about.html" class="mobile-nav-link active">
             <iconify-icon icon="ph:info-bold" width="18"></iconify-icon>
             <span>About Us</span>
           </a>
@@ -574,7 +509,7 @@
         <div class="footer-section">
           <h3>Pro Tools</h3>
           <ul>
-            <li><a href="./">Gemini Watermark Remover</a></li>
+            <li><a href="/">Gemini Watermark Remover</a></li>
             <li><a href="https://waterejector.devdeskapp.com/" target="_blank" rel="noopener noreferrer">Water Ejector Live ↗</a></li>
             <li><a href="https://waterejector.devdeskapp.com/deep-clean/" target="_blank" rel="noopener noreferrer">Deep Dust Clean ↗</a></li>
             <li><a href="https://waterejector.devdeskapp.com/vibration/" target="_blank" rel="noopener noreferrer">Vibration Mode ↗</a></li>
@@ -586,8 +521,8 @@
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="./#how-it-works">How It Works</a></li>
-            <li><a href="./#faq">FAQ</a></li>
+            <li><a href="/#how-it-works">How It Works</a></li>
+            <li><a href="/#faq">FAQ</a></li>
             <li><a href="./about.html">About Us</a></li>
             <li><a href="./contact.html">Contact Support</a></li>
           </ul>
