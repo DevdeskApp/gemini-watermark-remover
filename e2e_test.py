@@ -233,7 +233,8 @@ def run_tests():
         "assets/gemini-watermark-remover-after.webp",
         "assets/gemini-watermark-remover-preview-left.webp",
         "assets/veo-video-watermark-cleaner-preview-right.webp",
-        "assets/gemini-watermark-remover-logo.webp"
+        "assets/gemini-watermark-remover-logo.webp",
+        "assets/gemini-watermark-remover-og.png"
     ]
     for ka in key_assets:
         kap = os.path.join(BASE_DIR, ka)
