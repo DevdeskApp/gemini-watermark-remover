@@ -2074,39 +2074,102 @@ function initCustomSelects() {
 }
 
 
-// ── Dark / Light Theme Toggle (WaterEjector Style) ──
+
+
+
+// ── Service Worker & PWA Install Manager ──
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch((err) => {
+      console.warn('ServiceWorker registration error:', err);
+    });
+  });
+}
+
+let deferredInstallPrompt = null;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  const navBtns = document.querySelectorAll('#navInstallBtn');
+  navBtns.forEach((btn) => {
+    btn.style.display = 'inline-flex';
+  });
+});
+
+function initPwaInstall() {
+  const navBtns = document.querySelectorAll('#navInstallBtn');
+  navBtns.forEach((btn) => {
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      if (deferredInstallPrompt) {
+        deferredInstallPrompt.prompt();
+        const { outcome } = await deferredInstallPrompt.userChoice;
+        if (outcome === 'accepted') {
+          navBtns.forEach((b) => b.style.display = 'none');
+        }
+        deferredInstallPrompt = null;
+      } else {
+        alert(
+          'Install Gemini Watermark Remover WebApp:\n\n' +
+          '• Chrome / Edge Desktop: Click the Install icon (⊕) in the browser address bar.\n' +
+          '• Android / Mobile: Tap the 3 dots (⋮) menu and select "Install app" or "Add to Home Screen".\n' +
+          '• iPhone / iOS: Tap the Share button (⎋) in Safari and choose "Add to Home Screen".'
+        );
+      }
+    });
+  });
+
+  window.addEventListener('appinstalled', () => {
+    navBtns.forEach((b) => b.style.display = 'none');
+    deferredInstallPrompt = null;
+  });
+}
+
+// ── Dark / Light Theme Toggle (Sync Desktop & Mobile) ──
 function setupThemeToggle() {
-  const themeToggleBtn = document.getElementById('themeToggleBtn');
-  if (!themeToggleBtn) return;
+  const btns = [
+    document.getElementById('themeToggleBtn'),
+    document.getElementById('themeToggleBtnMobile')
+  ].filter(Boolean);
+
+  if (btns.length === 0) return;
 
   function updateThemeUI(theme) {
-    const sun = themeToggleBtn.querySelector('.sun-icon');
-    const moon = themeToggleBtn.querySelector('.moon-icon');
-    if (!sun || !moon) return;
-
-    if (theme === 'dark') {
-      sun.style.display = 'none';
-      moon.style.display = 'block';
-      themeToggleBtn.setAttribute('title', 'Switch to Light Mode');
-    } else {
-      sun.style.display = 'block';
-      moon.style.display = 'none';
-      themeToggleBtn.setAttribute('title', 'Switch to Dark Mode');
-    }
+    btns.forEach((btn) => {
+      const sun = btn.querySelector('.sun-icon');
+      const moon = btn.querySelector('.moon-icon');
+      if (sun && moon) {
+        if (theme === 'dark') {
+          sun.style.display = 'none';
+          moon.style.display = 'block';
+          btn.setAttribute('title', 'Switch to Light Mode');
+        } else {
+          sun.style.display = 'block';
+          moon.style.display = 'none';
+          btn.setAttribute('title', 'Switch to Dark Mode');
+        }
+      }
+    });
   }
 
   const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
   updateThemeUI(currentTheme);
 
-  themeToggleBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    const active = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', active);
-    localStorage.setItem('theme', active);
-    updateThemeUI(active);
+  btns.forEach((btn) => {
+    btn.onclick = (e) => {
+      e.preventDefault();
+      const active = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', active);
+      localStorage.setItem('theme', active);
+      updateThemeUI(active);
+    };
   });
 }
 
-
-document.addEventListener('DOMContentLoaded', setupThemeToggle);
+document.addEventListener('DOMContentLoaded', () => {
+  initPwaInstall();
+  setupThemeToggle();
+});
+initPwaInstall();
 setupThemeToggle();
+

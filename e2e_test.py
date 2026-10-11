@@ -18,7 +18,7 @@ def run_tests():
     required_files = [
         "index.html", "about.html", "contact.html", "disclaimer.html",
         "privacy-policy.html", "terms-of-service.html",
-        "style.css", "main.js", "ads.txt", "robots.txt", "sitemap.xml",
+        "style.css", "main.js", "sw.js", "ads.txt", "robots.txt", "sitemap.xml",
         "CNAME", "googlec621a4d35c484e60.html"
     ]
     print("\n[1] Checking Essential Root Files...")
@@ -138,6 +138,11 @@ def run_tests():
             print(f"  [ERROR] Missing themeToggleBtn in {hf}")
             errors += 1
 
+        # WebApp Download / Install Button
+        if 'navInstallBtn' not in content:
+            print(f"  [ERROR] Missing navInstallBtn in {hf}")
+            errors += 1
+
     # 5. Check index.html Ad Units & BMC Widget
     print("\n[5] Checking Ad Units & BMC Widget in index.html...")
     with open(os.path.join(BASE_DIR, "index.html"), 'r', encoding='utf-8') as f:
@@ -186,6 +191,17 @@ def run_tests():
                 print(f"       -> {u.text}")
         else:
             print(f"  [ERROR] Expected 6 URLs in sitemap, found {len(urls)}")
+            errors += 1
+
+        with open(sitemap_path, 'r', encoding='utf-8') as f:
+            sm_raw = f.read()
+        if '<changefreq>monthly</changefreq>' in sm_raw:
+            print("  [ERROR] sitemap.xml still contains 'monthly' changefreq! Expected weekly.")
+            errors += 1
+        elif '<changefreq>weekly</changefreq>' in sm_raw:
+            print("  [OK] sitemap.xml changefreq updated to 'weekly' across all pages.")
+        else:
+            print("  [ERROR] sitemap.xml missing 'weekly' changefreq tag.")
             errors += 1
     except Exception as e:
         print(f"  [ERROR] sitemap.xml parsing error: {e}")
