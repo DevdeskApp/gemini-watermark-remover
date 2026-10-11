@@ -33,7 +33,7 @@ def run_tests():
     # Check that .git repository is active
     git_dir = os.path.join(BASE_DIR, ".git")
     if os.path.exists(git_dir):
-        print("  [OK] .git repository active on branch master.")
+        print("  [OK] .git repository active on branch main.")
     else:
         print("  [ERROR] .git directory missing.")
         errors += 1
