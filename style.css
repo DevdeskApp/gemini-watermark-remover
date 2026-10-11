@@ -3807,6 +3807,32 @@ body[data-theme="dark"],
   color: #cbd5e1 !important;
 }
 
+[data-theme="dark"] .tool-badge {
+  background: rgba(139, 92, 246, 0.22) !important;
+  color: #c4b5fd !important;
+  border: 1px solid rgba(139, 92, 246, 0.45) !important;
+}
+
+[data-theme="dark"] .video-badge-card {
+  background: rgba(37, 99, 235, 0.22) !important;
+  color: #93c5fd !important;
+  border: 1px solid rgba(37, 99, 235, 0.45) !important;
+}
+
+[data-theme="dark"] .method-step-item .step-num-pill {
+  background: #334155 !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .featured-method .step-num-pill {
+  background: #8b5cf6 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .guide-subtitle {
+  color: #94a3b8 !important;
+}
+
 /* SynthID Section */
 [data-theme="dark"] .synthid-card {
   background: #1e293b !important;
@@ -3843,8 +3869,17 @@ body[data-theme="dark"],
 /* Myth Callout Box */
 [data-theme="dark"] .settings-myth-box {
   background: #1c1917 !important;
-  border-color: #ca8a04 !important;
+  border: 1px solid #854d0e !important;
   border-left: 4px solid #eab308 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+}
+
+[data-theme="dark"] .myth-badge {
+  color: #fde047 !important;
+}
+
+[data-theme="dark"] .myth-badge iconify-icon {
+  color: #eab308 !important;
 }
 
 [data-theme="dark"] .myth-text,
@@ -3852,11 +3887,25 @@ body[data-theme="dark"],
   color: #cbd5e1 !important;
 }
 
+[data-theme="dark"] .myth-text strong,
+[data-theme="dark"] .myth-solution strong {
+  color: #fef08a !important;
+}
+
+[data-theme="dark"] .myth-text em {
+  color: #e2e8f0 !important;
+}
+
 /* Video Guide Section */
+[data-theme="dark"] .video-guide-section {
+  background: transparent !important;
+}
+
 [data-theme="dark"] .video-guide-card {
-  background: linear-gradient(180deg, #1e293b 0%, #172033 100%) !important;
+  background: linear-gradient(180deg, #1e293b 0%, #151e2e 100%) !important;
   border-color: #334155 !important;
   color: #f8fafc !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4) !important;
 }
 
 [data-theme="dark"] .video-guide-title {
@@ -3867,10 +3916,21 @@ body[data-theme="dark"],
   color: #94a3b8 !important;
 }
 
+[data-theme="dark"] .video-guide-desc strong {
+  color: #f8fafc !important;
+}
+
 [data-theme="dark"] .video-guide-step {
   background: #0f172a !important;
   border-color: #334155 !important;
   color: #cbd5e1 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .video-guide-step .step-num-pill {
+  background: rgba(139, 92, 246, 0.25) !important;
+  color: #c4b5fd !important;
+  border: 1px solid rgba(139, 92, 246, 0.4) !important;
 }
 
 [data-theme="dark"] .video-guide-step-content strong {
@@ -3879,6 +3939,22 @@ body[data-theme="dark"],
 
 [data-theme="dark"] .video-guide-step-content p {
   color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .video-guide-step-content p strong {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .model-badge.badge-image {
+  background: rgba(37, 99, 235, 0.22) !important;
+  color: #93c5fd !important;
+  border: 1px solid rgba(37, 99, 235, 0.4) !important;
+}
+
+[data-theme="dark"] .model-badge.badge-video {
+  background: rgba(139, 92, 246, 0.22) !important;
+  color: #c4b5fd !important;
+  border: 1px solid rgba(139, 92, 246, 0.4) !important;
 }
 
 /* Models Grid */
