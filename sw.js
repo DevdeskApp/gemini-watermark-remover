@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gemini-watermark-remover-v1';
+const CACHE_NAME = 'gemini-watermark-remover-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -44,26 +44,33 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+// Network-First with Cache Fallback for dynamic development & fresh assets
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   const url = event.request.url;
-  // Skip ad requests and external tracking
-  if (url.includes('pagead2') || url.includes('googletagmanager') || url.includes('google-analytics')) {
+
+  // Skip ad requests, analytics, and external tracking
+  if (
+    url.includes('pagead2') ||
+    url.includes('googletagmanager') ||
+    url.includes('google-analytics') ||
+    url.includes('buymeacoffee') ||
+    url.includes('iconify')
+  ) {
     return;
   }
 
   event.respondWith(
-    caches.match(event.request).then((cached) => {
-      return cached || fetch(event.request).then((response) => {
-        if (!response || response.status !== 200 || response.type !== 'basic') {
-          return response;
+    fetch(event.request)
+      .then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
         }
-        const responseToCache = response.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseToCache);
-        });
-        return response;
-      }).catch(() => cached);
-    })
+        return networkResponse;
+      })
+      .catch(() => caches.match(event.request))
   );
 });
