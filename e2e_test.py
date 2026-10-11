@@ -120,8 +120,8 @@ def run_tests():
             errors += 1
 
         # Google tag (gtag)
-        if 'G-GJJ0XRV91T' not in content:
-            print(f"  [ERROR] Missing Google Analytics G-GJJ0XRV91T in {hf}")
+        if 'G-63YJ4Y9W27' not in content:
+            print(f"  [ERROR] Missing Google Analytics G-63YJ4Y9W27 in {hf}")
             errors += 1
 
         # Buy Me A Coffee link
