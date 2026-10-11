@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) - Dual Stream Support for DevDeskApp & Gemini Remover -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJJ0XRV91T"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,6 +10,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-GJJ0XRV91T');
+    gtag('config', 'G-63YJ4Y9W27');
   </script>
   <!-- Early Theme Initializer (Prevents FOUC) -->
   <script>
@@ -299,8 +300,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-      gtag('config', 'G-GJJ0XRV91T');
-      window.gtag = gtag;
+      // Head tag configured with dual streams
 
       // Only trigger on first real user gesture or after idle time (avoids Lighthouse automated TBT penalty)
       var interactionEvents = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
