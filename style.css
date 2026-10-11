@@ -499,19 +499,19 @@ body {
 }
 
 .btn-donate {
-  background: #ffdd00;
-  color: #000000 !important;
-  font-weight: 700;
-  border: 1px solid #facc15;
-  box-shadow: 0 2px 6px rgba(250, 204, 21, 0.35);
+  background: rgba(139, 92, 246, 0.12);
+  color: #8b5cf6 !important;
+  font-weight: 600;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  box-shadow: none;
 }
 
 .btn-donate:hover {
-  background: #fde047;
-  border-color: #eab308;
-  color: #000000 !important;
+  background: #8b5cf6 !important;
+  border-color: #8b5cf6 !important;
+  color: #ffffff !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(250, 204, 21, 0.45);
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
 }
 
 /* ── Main Container ── */
@@ -1555,98 +1555,132 @@ body {
   border: 1px solid var(--bg-card-border);
 }
 
-/* ── Footer ── */
+/* ── Footer (Multi-Column Layout Matching WaterEjector) ── */
 .app-footer {
   margin-top: 4rem;
-  padding-top: 2rem;
+  padding: 44px 0 20px;
   border-top: 1px solid var(--bg-card-border);
-  text-align: center;
-  font-size: 0.85rem;
+  background: var(--bg-surface, #f8fafc);
   color: var(--text-muted);
+  width: 100%;
 }
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
+.footer-container,
+.app-footer .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-.footer-credit {
-  font-size: 0.875rem;
-  color: var(--text-main);
-  font-weight: 500;
+.app-footer .footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 28px;
+  margin-bottom: 28px;
+  text-align: left;
 }
 
-.footer-credit strong {
+.app-footer .footer-section h3 {
+  font-size: 1.15rem;
   font-weight: 700;
+  margin-bottom: 12px;
   color: var(--text-main);
 }
 
-.footer-author-link {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.footer-author-link:hover {
-  color: var(--primary, #3b82f6);
-  text-decoration: underline;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.65rem;
-  font-size: 0.825rem;
-}
-
-.footer-link,
-.footer-link-btn {
-  background: transparent;
-  border: none;
-  color: var(--text-muted);
+.app-footer .footer-section h4 {
+  font-size: 0.95rem;
   font-weight: 600;
-  font-family: inherit;
-  font-size: 0.825rem;
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  transition: color var(--transition-fast);
-  padding: 0;
+  margin-bottom: 10px;
+  color: var(--brand-primary);
 }
 
-.footer-link:hover,
-.footer-link-btn:hover {
+.app-footer .footer-section p {
+  color: var(--text-muted);
+  line-height: 1.55;
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+}
+
+.app-footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app-footer .footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.app-footer .footer-section ul li a,
+.app-footer .footer-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  font-size: 0.88rem;
+  display: inline-block;
+}
+
+.app-footer .footer-section ul li a:hover,
+.app-footer .footer-link:hover {
   color: var(--brand-primary);
+  padding-left: 3px;
+  text-decoration: none;
+}
+
+.app-footer .footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--bg-card-border);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.app-footer .footer-bottom p {
+  margin: 0 0 6px 0;
+}
+
+.app-footer .footer-author-link {
+  color: var(--brand-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.app-footer .footer-author-link:hover {
   text-decoration: underline;
 }
 
+/* ── Coffee Support Button (Matching Install Button Purple Theme) ── */
 .footer-bmc-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.45rem 0.95rem;
-  background: #ffdd00;
-  color: #000000 !important;
-  font-weight: 700;
+  padding: 0.5rem 0.85rem;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  color: #8b5cf6 !important;
+  font-weight: 600;
   font-size: 0.825rem;
-  border-radius: 9999px;
-  text-decoration: none;
-  border: 1px solid #facc15;
-  box-shadow: 0 2px 8px rgba(250, 204, 21, 0.4);
-  transition: all var(--transition-fast);
-  margin-top: 0.25rem;
+  border-radius: calc(var(--radius-lg) - 0.25rem);
+  text-decoration: none !important;
+  transition: all var(--transition-normal);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.footer-bmc-btn svg,
+.footer-bmc-btn iconify-icon {
+  color: currentColor;
+  flex-shrink: 0;
 }
 
 .footer-bmc-btn:hover {
-  background: #fde047;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(250, 204, 21, 0.55);
+  background: #8b5cf6 !important;
+  border-color: #8b5cf6 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
   text-decoration: none !important;
 }
 
@@ -1660,6 +1694,7 @@ body {
   color: var(--text-muted);
   font-weight: 500;
 }
+
 
 /* ── App Dialog Modals ── */
 .app-modal {
@@ -3710,15 +3745,16 @@ body[data-theme="dark"],
 }
 
 [data-theme="dark"] .btn-donate {
-  background: #ffdd00 !important;
-  color: #000000 !important;
-  border-color: #facc15 !important;
-  box-shadow: 0 2px 10px rgba(250, 204, 21, 0.25) !important;
+  background: rgba(139, 92, 246, 0.2) !important;
+  border-color: rgba(139, 92, 246, 0.4) !important;
+  color: #c4b5fd !important;
+  box-shadow: none !important;
 }
 
 [data-theme="dark"] .btn-donate:hover {
-  background: #fde047 !important;
-  color: #000000 !important;
+  background: #8b5cf6 !important;
+  border-color: #8b5cf6 !important;
+  color: #ffffff !important;
 }
 
 [data-theme="dark"] .theme-toggle-btn {
@@ -4158,13 +4194,38 @@ body[data-theme="dark"],
   border-top: 1px solid #1e293b !important;
 }
 
+[data-theme="dark"] .app-footer .footer-section h3 {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .app-footer .footer-section p,
+[data-theme="dark"] .app-footer .footer-section ul li a,
+[data-theme="dark"] .app-footer .footer-bottom,
 [data-theme="dark"] .footer-credit,
 [data-theme="dark"] .footer-link,
 [data-theme="dark"] .footer-sub {
   color: #94a3b8 !important;
 }
 
+[data-theme="dark"] .app-footer .footer-section ul li a:hover,
 [data-theme="dark"] .footer-link:hover {
+  color: #a78bfa !important;
+}
+
+[data-theme="dark"] .app-footer .footer-bottom {
+  border-top: 1px solid #1e293b !important;
+}
+
+[data-theme="dark"] .footer-bmc-btn {
+  background: rgba(139, 92, 246, 0.2) !important;
+  border-color: rgba(139, 92, 246, 0.4) !important;
+  color: #c4b5fd !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .footer-bmc-btn:hover {
+  background: #8b5cf6 !important;
+  border-color: #8b5cf6 !important;
   color: #ffffff !important;
 }
 
