@@ -3574,3 +3574,86 @@ body {
   border-color: #334155;
 }
 
+
+
+
+/* ── WebApp Install Button Styling ── */
+.nav-install-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: calc(var(--radius-lg) - 0.25rem);
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  color: #8b5cf6;
+  transition: all var(--transition-normal);
+  line-height: 1;
+}
+
+.nav-install-btn:hover {
+  background: #8b5cf6;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
+}
+
+[data-theme="dark"] .nav-install-btn {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.4);
+  color: #c4b5fd;
+}
+
+[data-theme="dark"] .nav-install-btn:hover {
+  background: #8b5cf6;
+  color: #ffffff;
+}
+
+/* ── Mobile Header Fast Navigation Controls ── */
+.mobile-nav-controls {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.mobile-theme-btn {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .mobile-nav-controls {
+    display: flex;
+  }
+  .mobile-theme-btn {
+    display: inline-flex;
+  }
+  .desktop-theme-btn {
+    display: none;
+  }
+  .header-actions .btn-live-suite,
+  .header-actions .nav-install-btn,
+  .header-actions .btn-donate {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-title {
+    font-size: 0.95rem;
+  }
+  .brand-badge {
+    display: none;
+  }
+  .header-container {
+    padding: 0.5rem 0.65rem;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+}
+
