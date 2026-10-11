@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – Gemini Watermark Remover</title>
+  <meta name="description"
+    content="Discover the story and technology behind Gemini Watermark Remover. Learn how mathematical alpha unblending enables 100% private, lossless in-browser watermark removal." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="DevDeskApp" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" type="image/png"
+    href="https://watermark.devdeskapp.com/assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml"
+    href="https://watermark.devdeskapp.com/assets/favicon.svg" />
+  <link rel="shortcut icon" href="https://watermark.devdeskapp.com/assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://watermark.devdeskapp.com/assets/apple-touch-icon.png" />
+  <link rel="canonical" href="https://watermark.devdeskapp.com/about.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Gemini Watermark Remover" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://watermark.devdeskapp.com/about.html" />
+  <meta property="og:title" content="About Us – Gemini Watermark Remover" />
+  <meta property="og:description"
+    content="Learn about our mission to bring lossless, private, and mathematically sound media restoration to AI creators worldwide." />
+  <meta property="og:image" content="https://watermark.devdeskapp.com/assets/gemini-watermark-remover-logo.webp" />
+
+  <!-- Performance & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <!-- Google AdSense Account & Verification -->
+  <meta name="google-adsense-account" content="ca-pub-2136229145694242">
+  <meta name="google-site-verification" content="AonfzJBrxuLc3Obzd6gtq59VYwqOTXUwQbF22kDvlL4">
+
+  <!-- Preconnect to Google AdSense & Google Analytics -->
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+  <!-- Google AdSense (High-Performance Deferred Loading) -->
+  <script>
+    (function () {
+      var adsLoaded = false;
+      function loadAds() {
+        if (adsLoaded) return;
+        adsLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.crossOrigin = 'anonymous';
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2136229145694242';
+        document.head.appendChild(s);
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadAds, { timeout: 2000 });
+      } else {
+        window.addEventListener('load', function () { setTimeout(loadAds, 800); });
+      }
+      ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (e) {
+        addEventListener(e, loadAds, { once: true, passive: true });
+      });
+    })();
+  </script>
+
+  <!-- Google tag (gtag.js) Deferred Tracking -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-63YJ4Y9W27');
+    (function () {
+      var done = false;
+      function load() {
+        if (done) return;
+        done = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-63YJ4Y9W27';
+        document.head.appendChild(s);
+      }
+      ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (e) {
+        addEventListener(e, load, { once: true, passive: true });
+      });
+      if (document.readyState === 'complete') load();
+      else addEventListener('load', load);
+    })();
+  </script>
+</head>
+
+<body>
+
+    <!-- Top Navigation Header (WaterEjector Suite Style) -->
+    <!-- Top Navigation Header (WaterEjector Suite Style) -->
+  <header class="app-header">
+    <div class="header-container">
+      <a href="./index.html" class="brand" title="Gemini Watermark Remover by DevDeskApp">
+        <img src="./assets/gemini-watermark-remover-logo.webp" alt="Gemini Watermark Remover Logo - DevDeskApp AI Image & Video Cleaner" width="38" height="38" decoding="async" fetchpriority="high" class="brand-logo-img" />
+        <div class="brand-text">
+          <span class="brand-title">Gemini Remover</span>
+          <span class="brand-badge">DevDeskApp</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="./index.html" class="nav-link">Home</a>
+
+        <!-- Tools Dropdown (Live WaterEjector & Audio Suite) -->
+        <div class="nav-dropdown" id="tools-dropdown">
+          <button type="button" class="nav-link nav-dropdown-btn" id="tools-dropdown-btn" aria-expanded="false" aria-haspopup="true">
+            <span>Tools</span>
+            <iconify-icon icon="ph:caret-down-bold" class="dropdown-arrow" width="12"></iconify-icon>
+          </button>
+          <div class="dropdown-menu" id="tools-dropdown-menu">
+            <div class="dropdown-group-label">CURRENT AI TOOL</div>
+            <a href="./index.html" class="dropdown-item active-tool">
+              <div class="dropdown-item-icon active-icon">
+                <iconify-icon icon="ph:sparkle-fill" width="18"></iconify-icon>
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title-row">
+                  <span class="dropdown-item-title">Gemini Watermark Remover</span>
+                  <span class="badge-current">Current</span>
+                </div>
+                <p class="dropdown-item-desc">Mathematical alpha unblending for Gemini, Flow &amp; Veo.</p>
+              </div>
+            </a>
+
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-group-label">WATEREJECTOR &amp; AUDIO SUITE (LIVE)</div>
+
+            <a href="https://waterejector.devdeskapp.com/" target="_blank" rel="noopener noreferrer" class="dropdown-item tool-we-item">
+              <div class="dropdown-item-icon icon-water">
+                <iconify-icon icon="ph:drop-bold" width="18"></iconify-icon>
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title-row">
+                  <span class="dropdown-item-title">Water Eject (165Hz Cleaner)</span>
+                  <span class="badge-live">Live Tool</span>
+                </div>
+                <p class="dropdown-item-desc">Eject trapped water with 165Hz pulsed bass tone.</p>
+              </div>
+              <iconify-icon icon="ph:arrow-square-out-bold" width="15" class="dropdown-ext-icon"></iconify-icon>
+            </a>
+
+            <a href="https://waterejector.devdeskapp.com/deep-clean/" target="_blank" rel="noopener noreferrer" class="dropdown-item tool-we-item">
+              <div class="dropdown-item-icon icon-dust">
+                <iconify-icon icon="ph:wind-bold" width="18"></iconify-icon>
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title-row">
+                  <span class="dropdown-item-title">Deep Clean (Dust Sweep)</span>
+                </div>
+                <p class="dropdown-item-desc">100Hz – 250Hz frequency sweep to clear speaker dust.</p>
+              </div>
+              <iconify-icon icon="ph:arrow-square-out-bold" width="15" class="dropdown-ext-icon"></iconify-icon>
+            </a>
+
+            <a href="https://waterejector.devdeskapp.com/game/" target="_blank" rel="noopener noreferrer" class="dropdown-item tool-we-item">
+              <div class="dropdown-item-icon icon-game">
+                <iconify-icon icon="ph:game-controller-bold" width="18"></iconify-icon>
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title-row">
+                  <span class="dropdown-item-title">Speaker Rescue Arcade</span>
+                  <span class="badge-game">Arcade Game</span>
+                </div>
+                <p class="dropdown-item-desc">Interactive sound ejection game with droplet physics.</p>
+              </div>
+              <iconify-icon icon="ph:arrow-square-out-bold" width="15" class="dropdown-ext-icon"></iconify-icon>
+            </a>
+
+            <a href="https://waterejector.devdeskapp.com/vibration/" target="_blank" rel="noopener noreferrer" class="dropdown-item tool-we-item">
+              <div class="dropdown-item-icon icon-vib">
+                <iconify-icon icon="ph:vibrate-bold" width="18"></iconify-icon>
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title-row">
+                  <span class="dropdown-item-title">Vibration Mode (80Hz)</span>
+                </div>
+                <p class="dropdown-item-desc">Navigator Haptic API pulses to mechanically shake droplets.</p>
+              </div>
+              <iconify-icon icon="ph:arrow-square-out-bold" width="15" class="dropdown-ext-icon"></iconify-icon>
+            </a>
+
+            <a href="https://waterejector.devdeskapp.com/stereo-test/" target="_blank" rel="noopener noreferrer" class="dropdown-item tool-we-item">
+              <div class="dropdown-item-icon icon-stereo">
+                <iconify-icon icon="ph:headphones-bold" width="18"></iconify-icon>
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title-row">
+                  <span class="dropdown-item-title">Stereo Balance Tester</span>
+                </div>
+                <p class="dropdown-item-desc">L/R audio panner diagnostic for earbuds &amp; phones.</p>
+              </div>
+              <iconify-icon icon="ph:arrow-square-out-bold" width="15" class="dropdown-ext-icon"></iconify-icon>
+            </a>
+
+            <a href="https://waterejector.devdeskapp.com/charging-port-fix/" target="_blank" rel="noopener noreferrer" class="dropdown-item tool-we-item">
+              <div class="dropdown-item-icon icon-port">
+                <iconify-icon icon="ph:lightning-slash-bold" width="18"></iconify-icon>
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title-row">
+                  <span class="dropdown-item-title">Wet Charging Port Fix</span>
+                </div>
+                <p class="dropdown-item-desc">Moisture detected resolution guide &amp; 30m air-dry timer.</p>
+              </div>
+              <iconify-icon icon="ph:arrow-square-out-bold" width="15" class="dropdown-ext-icon"></iconify-icon>
+            </a>
+          </div>
+        </div>
+
+        <a href="./index.html#panel-video" class="nav-link" id="nav-link-video">Video Remover</a>
+        <a href="./index.html#how-it-works" class="nav-link">How it Works</a>
+        <a href="./index.html#faq" class="nav-link">FAQ</a>
+        <a href="./about.html" class="nav-link">About</a>
+        <a href="./contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Hamburger Menu Toggle Button (Mobile Only) -->
+      <button type="button" id="mobile-menu-btn" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <iconify-icon icon="ph:list-bold" class="icon-hamburger" width="22"></iconify-icon>
+        <iconify-icon icon="ph:x-bold" class="icon-close hidden" width="22"></iconify-icon>
+      </button>
+
+      <div id="header-actions" class="header-actions">
+        <!-- Mobile Navigation Menu (visible inside mobile drawer) -->
+        <div class="mobile-nav-links">
+          <a href="./index.html" class="mobile-nav-link">
+            <iconify-icon icon="ph:house-bold" width="18"></iconify-icon>
+            <span>Home</span>
+          </a>
+          <a href="./index.html#panel-video" class="mobile-nav-link" id="mobile-nav-link-video">
+            <iconify-icon icon="ph:video-bold" width="18"></iconify-icon>
+            <span>Video Remover</span>
+          </a>
+          <a href="./index.html#how-it-works" class="mobile-nav-link">
+            <iconify-icon icon="ph:info-bold" width="18"></iconify-icon>
+            <span>How it Works</span>
+          </a>
+          <a href="./index.html#faq" class="mobile-nav-link">
+            <iconify-icon icon="ph:question-bold" width="18"></iconify-icon>
+            <span>FAQ</span>
+          </a>
+          <a href="./about.html" class="mobile-nav-link">
+            <iconify-icon icon="ph:info-bold" width="18"></iconify-icon>
+            <span>About Us</span>
+          </a>
+          <a href="./contact.html" class="mobile-nav-link">
+            <iconify-icon icon="ph:envelope-simple-bold" width="18"></iconify-icon>
+            <span>Contact Us</span>
+          </a>
+
+          <div class="mobile-promo-card">
+            <div class="mobile-promo-header">
+              <span class="mobile-promo-label">WaterEjector Suite</span>
+              <span class="badge-featured">Live Tools</span>
+            </div>
+            <a href="https://waterejector.devdeskapp.com/" target="_blank" rel="noopener noreferrer" class="mobile-promo-link">
+              <div class="dropdown-item-icon icon-water">
+                <iconify-icon icon="ph:drop-fill" width="18"></iconify-icon>
+              </div>
+              <div class="mobile-promo-info">
+                <strong>Water Eject Tool</strong>
+                <p>165Hz Sound Speaker Cleaner</p>
+              </div>
+              <iconify-icon icon="ph:arrow-square-out-bold" width="16" class="mobile-promo-ext"></iconify-icon>
+            </a>
+            <a href="https://waterejector.devdeskapp.com/game/" target="_blank" rel="noopener noreferrer" class="mobile-promo-link" style="margin-top: 6px;">
+              <div class="dropdown-item-icon icon-game">
+                <iconify-icon icon="ph:game-controller-fill" width="18"></iconify-icon>
+              </div>
+              <div class="mobile-promo-info">
+                <strong>Speaker Rescue Game</strong>
+                <p>Water Eject Arcade Challenge</p>
+              </div>
+              <iconify-icon icon="ph:arrow-square-out-bold" width="16" class="mobile-promo-ext"></iconify-icon>
+            </a>
+          </div>
+        </div>
+
+        <div class="header-action-buttons">
+          <!-- Live WaterEjector Button -->
+          <a href="https://waterejector.devdeskapp.com/" target="_blank" rel="noopener noreferrer" class="btn-live-suite" title="Open Live WaterEjector App">
+            <iconify-icon icon="ph:drop-fill" width="16" style="color: #38bdf8;"></iconify-icon>
+            <span>Water Ejector</span>
+          </a>
+
+          
+
+          <!-- Buy Me a Coffee -->
+          <a href="https://buymeacoffee.com/devdeskapp" target="_blank" rel="noopener noreferrer" class="btn-donate" title="Support on Buy Me a Coffee">
+            <iconify-icon icon="ph:coffee-fill" width="16" style="color: #f59e0b;"></iconify-icon>
+            <span>Coffee</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="page-container">
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <a href="./" class="breadcrumb-link">
+        <iconify-icon icon="ph:house-bold" width="14"></iconify-icon> Home
+      </a>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-current">About Us</span>
+    </nav>
+
+    <!-- Page Header Card -->
+    <div class="page-header-card">
+      <span class="page-badge-pill">
+        <iconify-icon icon="ph:sparkle-bold" width="15"></iconify-icon> Our Mission &amp; Technology
+      </span>
+      <h1 class="page-main-heading">About Gemini Watermark Remover</h1>
+      <p class="page-lead-description">
+        We are building the future of private, high-fidelity media tools. Learn why we created a mathematical
+        alternative to blurry AI inpainting and how our 100% in-browser engine protects your privacy.
+      </p>
+      <div class="page-meta-info">
+        <span class="page-meta-item">
+          <iconify-icon icon="ph:user-bold" width="15"></iconify-icon> Created by <strong>DevDeskApp</strong>
+        </span>
+        <span class="page-meta-item">
+          <iconify-icon icon="ph:code-bold" width="15" style="color: var(--brand-primary);"></iconify-icon> 100% Open Source
+        </span>
+        <span class="page-meta-item">
+          <iconify-icon icon="ph:shield-check-bold" width="15" style="color: var(--accent-green);"></iconify-icon> Zero Cloud Uploads
+        </span>
+      </div>
+    </div>
+
+    <!-- Article Content Card -->
+    <article class="content-article-card">
+
+      <!-- Author Introduction Card -->
+      <div class="about-author-box">
+        <img src="https://avatars.githubusercontent.com/u/104107127?v=4" alt="DevDeskApp Avatar"
+          class="about-author-avatar" onerror="this.src='./assets/gemini-watermark-remover-logo.webp';" />
+        <div class="about-author-details">
+          <h3>DevDeskApp</h3>
+          <div class="about-author-tagline">Founder &amp; Full-Stack Web Engineer</div>
+          <p class="about-author-bio">
+            Passionate about modern web standards, hardware-accelerated WebCodecs, and building free, performant, and privacy-respecting utilities for the global digital creator community.
+          </p>
+          <div class="about-author-links">
+            <a href="https://www.devdeskapp.com/" target="_blank" rel="noopener noreferrer" class="contact-action-link">
+              <iconify-icon icon="ph:globe-bold" width="14"></iconify-icon> Portfolio
+            </a>
+            
+            <a href="https://buymeacoffee.com/devdeskapp" target="_blank" rel="noopener noreferrer" class="contact-action-link">
+              <iconify-icon icon="ph:coffee-bold" width="14"></iconify-icon> Support Work
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section: The Story Behind The Tool -->
+      <section class="legal-section">
+        <h2>
+          <iconify-icon icon="ph:lightbulb-bold" width="22" style="color: #f59e0b;"></iconify-icon>
+          The Story Behind The Project
+        </h2>
+        <p>
+          In recent years, the release of frontier multimodal AI models—such as Google's <strong>Gemini 1.5/2.0</strong>,
+          <strong>Imagen 3</strong>, <strong>Veo 3</strong>, and <strong>Google Flow / Gemini Omni</strong>—revolutionized
+          the creative landscape. Creators, digital artists, and developers gained the ability to generate hyper-realistic
+          concept art and cinematic video clips with simple text prompts.
+        </p>
+        <p>
+          However, these models automatically imprint a visible, semi-transparent 4-pointed sparkle watermark in the corner
+          of generated images and video clips. For artists striving to showcase their prompts, assemble portfolio showreels,
+          or integrate generative clips into video productions, this visible overlay became a persistent distraction.
+        </p>
+        <p>
+          The existing solutions on the web were deeply frustrating:
+        </p>
+        <ul>
+          <li><strong>Destructive AI Inpainting:</strong> Most web utilities "remove" watermarks by hallucinating substitute pixels, resulting in awkward smudges, blurred textures, and ruined compositions.</li>
+          <li><strong>Aggressive Paywalls:</strong> Users were forced into recurring monthly subscriptions just to process a single 5-second video clip.</li>
+          <li><strong>Privacy Hazards:</strong> Cloud-based services require uploading sensitive, unreleased creative files to unknown overseas servers.</li>
+        </ul>
+        <p>
+          Recognizing these flaws, <strong>Gemini Watermark Remover</strong> was created to deliver a mathematically sound,
+          uncompromisingly private, and completely free alternative.
+        </p>
+      </section>
+
+      <!-- Section: Why Mathematical Alpha Unblending -->
+      <section class="legal-section">
+        <h2>
+          <iconify-icon icon="ph:math-operations-bold" width="22" style="color: var(--brand-primary);"></iconify-icon>
+          The Science: Alpha Unblending vs. AI Inpainting
+        </h2>
+        <p>
+          When an AI platform applies a watermark logo, it does not destroy the pixels underneath. Instead, it blends the
+          watermark color vector ($F$) over the background image ($B$) using standard linear alpha compositing:
+        </p>
+
+        <div class="legal-callout-box info">
+          <iconify-icon icon="ph:function-bold" class="legal-callout-icon"></iconify-icon>
+          <div class="legal-callout-text">
+            <strong>The Mathematical Alpha Compositing Formula:</strong><br />
+            <code>Composited_Pixel = (Alpha × Watermark_Color) + ((1 - Alpha) × Original_Background)</code><br /><br />
+            Because the transparent sparkle is a predictable linear blend, our engine algebraically reverses the equation:<br />
+            <code>Original_Background = (Composited_Pixel - Alpha × Watermark_Color) / (1 - Alpha)</code>
+          </div>
+        </div>
+
+        <p>
+          By performing this inverse unblending frame-by-frame, <strong>we recover the actual original pixels underneath the logo</strong>.
+          There is zero hallucination, zero blurring, and zero loss of textural detail.
+        </p>
+      </section>
+
+      <!-- Core Pillars Grid -->
+      <section class="legal-section">
+        <h2>
+          <iconify-icon icon="ph:crown-bold" width="22" style="color: var(--brand-primary);"></iconify-icon>
+          Our Core Architecture &amp; Values
+        </h2>
+
+        <div class="about-features-grid">
+          <div class="about-feature-card">
+            <div class="about-feature-icon">
+              <iconify-icon icon="ph:shield-check-bold"></iconify-icon>
+            </div>
+            <h3 class="about-feature-title">100% Client-Side Privacy</h3>
+            <p class="about-feature-desc">
+              Your images and videos never leave your browser. All computations happen in local device memory using WebCodecs and Canvas APIs.
+            </p>
+          </div>
+
+          <div class="about-feature-card">
+            <div class="about-feature-icon">
+              <iconify-icon icon="ph:lightning-bold"></iconify-icon>
+            </div>
+            <h3 class="about-feature-title">GPU-Accelerated Speed</h3>
+            <p class="about-feature-desc">
+              Harnesses your local graphics card to decode, unblend, and re-encode high-definition video frames at maximum frame rates.
+            </p>
+          </div>
+
+          <div class="about-feature-card">
+            <div class="about-feature-icon">
+              <iconify-icon icon="ph:speaker-high-bold"></iconify-icon>
+            </div>
+            <h3 class="about-feature-title">Full Audio Preservation</h3>
+            <p class="about-feature-desc">
+              Demuxes and remuxes your video's original audio track synchronously with zero synchronization drift or loss of sound quality.
+            </p>
+          </div>
+
+          <div class="about-feature-card">
+            <div class="about-feature-icon">
+              <iconify-icon icon="ph:gift-bold"></iconify-icon>
+            </div>
+            <h3 class="about-feature-title">100% Free Forever</h3>
+            <p class="about-feature-desc">
+              No registration forms, no daily credits, no credit card requirements. A pure, transparent open-source utility for all.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technology Stack -->
+      <section class="legal-section">
+        <h2>
+          <iconify-icon icon="ph:stack-bold" width="22" style="color: var(--brand-primary);"></iconify-icon>
+          Under the Hood: Open Web Technologies
+        </h2>
+        <p>
+          Gemini Watermark Remover is built using cutting-edge vanilla web standards to deliver desktop-class performance
+          without bloated frameworks:
+        </p>
+        <ul>
+          <li><strong>WebCodecs API:</strong> Grants direct low-level access to hardware video decoders and encoders directly in Chrome, Edge, and modern browsers.</li>
+          <li><strong>HTML5 Canvas &amp; OffscreenCanvas:</strong> Enables multi-threaded pixel manipulation via dedicated Web Workers.</li>
+          <li><strong>MP4Box.js:</strong> Fast, in-memory ISO BMFF demuxer and container parser for MP4, WebM, and MOV containers.</li>
+          <li><strong>Web Audio API:</strong> Captures and reconstructs lossless multi-channel PCM and AAC audio streams.</li>
+        </ul>
+      </section>
+
+      <!-- Get in touch -->
+      <section class="legal-section">
+        <h2>
+          <iconify-icon icon="ph:chats-bold" width="22" style="color: var(--brand-primary);"></iconify-icon>
+          Get in Touch &amp; Support Us
+        </h2>
+        <p>
+          Gemini Watermark Remover is an evolving open-source project. If you have feature suggestions, bug reports, or
+          want to contribute to model presets, we invite you to connect with us:
+        </p>
+        <ul>
+          
+          <li>Send an email directly via our <a href="./contact.html" style="color: var(--brand-primary); font-weight: 600;">Contact Page</a></li>
+          <li>Support future open-source developments via <a href="https://buymeacoffee.com/devdeskapp" target="_blank" rel="noopener noreferrer" style="color: var(--brand-primary); font-weight: 600;">Buy Me a Coffee</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <p class="footer-credit">
+        Designed &amp; Developed by <a href="https://www.devdeskapp.com/" target="_blank" rel="noopener noreferrer"
+          class="footer-author-link"><strong>DevDeskApp</strong></a>
+      </p>
+
+      <div class="footer-links">
+        <a href="./about.html" class="footer-link">About Us</a>
+        <span class="footer-dot">•</span>
+        <a href="./contact.html" class="footer-link">Contact</a>
+        <span class="footer-dot">•</span>
+        <a href="./privacy-policy.html" class="footer-link">Privacy Policy</a>
+        <span class="footer-dot">•</span>
+        <a href="./terms-of-service.html" class="footer-link">Terms of Service</a>
+        <span class="footer-dot">•</span>
+        <a href="./disclaimer.html" class="footer-link">Disclaimer &amp; DMCA</a>
+        <span class="footer-dot">•</span>
+        
+        <a href="https://buymeacoffee.com/devdeskapp" target="_blank" rel="noopener noreferrer" class="footer-link">
+          <iconify-icon icon="ph:heart-fill" width="14" style="color: #f43f5e;"></iconify-icon> Support
+        </a>
+      </div>
+
+      <p class="footer-sub">
+        100% Free &amp; Private • All media processed locally in your browser
+      </p>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
