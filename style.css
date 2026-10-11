@@ -3396,4 +3396,181 @@ body {
   color: var(--text-muted, #94a3b8);
   margin-bottom: 0.35rem;
   user-select: none;
-}
+}
+
+
+
+/* ── WaterEjector Suite: Full Dark Mode Design System ── */
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px solid var(--bg-card-border);
+  color: var(--text-main);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(139, 92, 246, 0.12);
+  border-color: #8b5cf6;
+  color: #8b5cf6;
+  transform: rotate(15deg) scale(1.08);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --bg-card-border: #334155;
+  --bg-header: rgba(15, 23, 42, 0.94);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-light: #cbd5e1;
+  --brand-primary: #8b5cf6;
+  --brand-primary-hover: #7c3aed;
+  --brand-glow: rgba(139, 92, 246, 0.25);
+}
+
+[data-theme="dark"] body {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .app-header {
+  background: rgba(15, 23, 42, 0.96);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 25px -2px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .brand-title {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="dark"] .nav-link {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .nav-dropdown-btn {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .dropdown-menu {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .dropdown-group-label {
+  color: #64748b;
+}
+
+[data-theme="dark"] .dropdown-item {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .dropdown-item:hover,
+[data-theme="dark"] .tool-we-item:hover {
+  background: #0f172a;
+}
+
+[data-theme="dark"] .dropdown-item-title {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .dropdown-divider {
+  background: #334155;
+}
+
+[data-theme="dark"] .card {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .dropzone {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .dropzone:hover {
+  border-color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.06);
+}
+
+[data-theme="dark"] .hero-title {
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="dark"] .hero-badge-pill {
+  background: #1e293b;
+  color: #e2e8f0;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .btn-donate {
+  background: #1e293b;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .btn-donate:hover {
+  background: #334155;
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .app-footer {
+  background: #0b0f19;
+  border-top: 1px solid #1e293b;
+}
+
+[data-theme="dark"] .footer-credit,
+[data-theme="dark"] .footer-link {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .footer-link:hover {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .content-article-card h2,
+[data-theme="dark"] .content-article-card h3,
+[data-theme="dark"] .faq-question-btn {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .content-article-card {
+  background: #1e293b;
+  border-color: #334155;
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .faq-item {
+  border-color: #334155;
+}
+
+[data-theme="dark"] .contact-card-item {
+  background: #1e293b;
+  border-color: #334155;
+}
+

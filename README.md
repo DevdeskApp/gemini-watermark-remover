@@ -1,7 +1,7 @@
 # ✨ Free Gemini & Google Flow Watermark Remover (Gemini Omni & Nano Banana)
 
 <p align="center">
-  <a href="https://watermark.devdeskapp.com/">
+  <a href="https://gemini-watermark-remover.devdeskapp.com/">
     <img src="./assets/logo.webp" alt="Gemini Watermark Remover Logo" width="100" height="100" />
   </a>
 </p>
@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://watermark.devdeskapp.com/"><img src="https://img.shields.io/badge/🚀_Live_Demo-GitHub_Pages-6366f1?style=for-the-badge" alt="Live Demo" /></a>
+  <a href="https://gemini-watermark-remover.devdeskapp.com/"><img src="https://img.shields.io/badge/🚀_Live_Demo-GitHub_Pages-6366f1?style=for-the-badge" alt="Live Demo" /></a>
   <a href="https://github.com/devdeskapp/gemini-watermark-remover"><img src="https://img.shields.io/badge/GitHub-Stars-eab308?style=for-the-badge&logo=github" alt="GitHub" /></a>
   <a href="https://buymeacoffee.com/devdeskapp"><img src="https://img.shields.io/badge/☕_Donate-Buy_Me_A_Coffee-f43f5e?style=for-the-badge" alt="Buy Me A Coffee" /></a>
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
@@ -22,7 +22,7 @@
 
 ## 🌐 Live Website
 
-👉 **Try it online:** [https://watermark.devdeskapp.com/](https://watermark.devdeskapp.com/)
+👉 **Try it online:** [https://gemini-watermark-remover.devdeskapp.com/](https://gemini-watermark-remover.devdeskapp.com/)
 
 ---
 

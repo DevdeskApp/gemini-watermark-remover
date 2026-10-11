@@ -129,8 +129,13 @@ def run_tests():
             errors += 1
 
         # Canonical tag
-        if not re.search(r'<link\s+rel=["\']canonical["\']\s+href=["\']https://watermark\.devdeskapp\.com/', content):
+        if not re.search(r'<link\s+rel=["\']canonical["\']\s+href=["\']https://gemini-watermark-remover\.devdeskapp\.com/', content):
             print(f"  [ERROR] Missing or invalid canonical tag in {hf}")
+            errors += 1
+
+        # Theme Toggle Button
+        if 'themeToggleBtn' not in content:
+            print(f"  [ERROR] Missing themeToggleBtn in {hf}")
             errors += 1
 
     # 5. Check index.html Ad Units & BMC Widget
@@ -192,7 +197,7 @@ def run_tests():
     if os.path.exists(robots_path):
         with open(robots_path, 'r', encoding='utf-8') as f:
             rc = f.read()
-        if "User-agent: *" in rc and "Sitemap: https://watermark.devdeskapp.com/sitemap.xml" in rc:
+        if "User-agent: *" in rc and "Sitemap: https://gemini-watermark-remover.devdeskapp.com/sitemap.xml" in rc:
             print("  [OK] robots.txt validated with User-agent and Sitemap directive.")
         else:
             print("  [ERROR] robots.txt missing directives.")
