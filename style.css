@@ -4234,7 +4234,7 @@ body[data-theme="dark"],
 
 /* ── WebApp Install Button Styling ── */
 .nav-install-btn {
-  display: inline-flex;
+  display: none;
   align-items: center;
   gap: 0.45rem;
   padding: 0.5rem 0.85rem;
@@ -4247,6 +4247,12 @@ body[data-theme="dark"],
   color: #8b5cf6;
   transition: all var(--transition-normal);
   line-height: 1;
+}
+
+/* Hide PWA install controls if app is already installed */
+.pwa-installed .nav-install-btn,
+.pwa-installed #navInstallBtn {
+  display: none !important;
 }
 
 .nav-install-btn:hover {
