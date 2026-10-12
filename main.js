@@ -1,4 +1,14 @@
 // ── Client-Side Clean Watermark Engine ──
+(function checkEarlyPwa() {
+  const isInstalled = window.matchMedia('(display-mode: standalone)').matches ||
+                      window.matchMedia('(display-mode: window-controls-overlay)').matches ||
+                      window.navigator.standalone === true ||
+                      document.referrer.includes('android-app://') ||
+                      localStorage.getItem('pwa_installed') === 'true';
+  if (isInstalled) {
+    document.documentElement.classList.add('pwa-installed');
+  }
+})();
 
 // ── 1. Engine Core (alphaMap, blendModes, geometry, tuner) ──
 function calculateAlphaMap(bgCaptureImageData) {
@@ -2087,17 +2097,62 @@ if ('serviceWorker' in navigator) {
 }
 
 let deferredInstallPrompt = null;
+
+function isGeminiPwaInstalled() {
+  if (window.matchMedia('(display-mode: standalone)').matches ||
+      window.matchMedia('(display-mode: window-controls-overlay)').matches ||
+      window.navigator.standalone === true ||
+      document.referrer.includes('android-app://')) {
+    return true;
+  }
+  if (localStorage.getItem('pwa_installed') === 'true') {
+    return true;
+  }
+  return false;
+}
+
+function updatePwaInstallButtons() {
+  const navBtns = document.querySelectorAll('#navInstallBtn, .nav-install-btn');
+  if (isGeminiPwaInstalled()) {
+    document.documentElement.classList.add('pwa-installed');
+    navBtns.forEach((btn) => {
+      btn.style.setProperty('display', 'none', 'important');
+    });
+    return;
+  }
+
+  const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) && !window.MSStream;
+  if (deferredInstallPrompt || isIOS) {
+    navBtns.forEach((btn) => {
+      btn.style.display = 'inline-flex';
+    });
+  } else {
+    navBtns.forEach((btn) => {
+      btn.style.display = 'none';
+    });
+  }
+}
+
+// Check via getInstalledRelatedApps API
+if ('getInstalledRelatedApps' in navigator) {
+  navigator.getInstalledRelatedApps().then((apps) => {
+    if (apps && apps.length > 0) {
+      localStorage.setItem('pwa_installed', 'true');
+      updatePwaInstallButtons();
+    }
+  }).catch(() => {});
+}
+
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
+  if (isGeminiPwaInstalled()) return;
   deferredInstallPrompt = e;
-  const navBtns = document.querySelectorAll('#navInstallBtn');
-  navBtns.forEach((btn) => {
-    btn.style.display = 'inline-flex';
-  });
+  updatePwaInstallButtons();
 });
 
 function initPwaInstall() {
-  const navBtns = document.querySelectorAll('#navInstallBtn');
+  updatePwaInstallButtons();
+  const navBtns = document.querySelectorAll('#navInstallBtn, .nav-install-btn');
   navBtns.forEach((btn) => {
     btn.addEventListener('click', async (e) => {
       e.preventDefault();
@@ -2105,7 +2160,8 @@ function initPwaInstall() {
         deferredInstallPrompt.prompt();
         const { outcome } = await deferredInstallPrompt.userChoice;
         if (outcome === 'accepted') {
-          navBtns.forEach((b) => b.style.display = 'none');
+          localStorage.setItem('pwa_installed', 'true');
+          updatePwaInstallButtons();
         }
         deferredInstallPrompt = null;
       } else {
@@ -2120,8 +2176,9 @@ function initPwaInstall() {
   });
 
   window.addEventListener('appinstalled', () => {
-    navBtns.forEach((b) => b.style.display = 'none');
+    localStorage.setItem('pwa_installed', 'true');
     deferredInstallPrompt = null;
+    updatePwaInstallButtons();
   });
 }
 
