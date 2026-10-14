@@ -89,5 +89,5 @@ DevDeskApp develops open web utilities prioritizing zero telemetry, privacy, and
 - Website: https://gemini-watermark-remover.devdeskapp.com/
 - Contact Form: https://gemini-watermark-remover.devdeskapp.com/contact.html
 - Developer: DevDeskApp Team
-- GitHub Repository: https://github.com/WaterEjector/gemini-watermark-remover
+- GitHub Repository: https://github.com/DevdeskApp/gemini-watermark-remover
 - Support & Donations: https://buymeacoffee.com/devdeskapp
