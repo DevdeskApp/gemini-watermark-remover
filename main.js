@@ -1425,7 +1425,6 @@ function initImageRemover() {
               Download Cleaned PNG
             </a>
           </div>
-          ${getPromoCardHtml('image')}
         </div>
       `;
       smoothScrollTo(resultsArea);
@@ -1896,7 +1895,6 @@ function initVideoRemover() {
               Download Cleaned Video MP4
             </a>
           </div>
-          ${getPromoCardHtml('video')}
         </div>
       `;
       smoothScrollTo(resultsArea);
@@ -1909,35 +1907,6 @@ function initVideoRemover() {
   });
 }
 
-// ── Results Screen Promo Card Generator ──
-function getPromoCardHtml(type = 'image') {
-  return `
-    <div class="results-promo-banner" data-auto-favicon="https://ishara-madu.github.io/online-image-converter/">
-      <div class="results-promo-badge-row">
-        <span class="results-promo-tag">
-          Recommended Free Tool
-        </span>
-        <span class="badge-featured">100% Free &amp; Fast</span>
-      </div>
-      <div class="results-promo-body">
-        <div class="results-promo-icon-box">
-          <img src="https://ishara-madu.github.io/online-image-converter/favicon.ico"
-            onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=ishara-madu.github.io&amp;sz=64';"
-            alt="Online Image Converter Favicon"
-            class="tool-favicon-img" width="26" height="26" loading="lazy" />
-        </div>
-        <div class="results-promo-info">
-          <h4 class="results-promo-title">Convert image formats with Online Image Converter</h4>
-          <p class="results-promo-desc">Batch convert your cleaned files to WebP, PNG, JPG, AVIF, or GIF with lossless quality right in your browser.</p>
-        </div>
-        <a href="https://ishara-madu.github.io/online-image-converter/" target="_blank" rel="noopener noreferrer" class="results-promo-btn">
-          <span>Try Image Converter</span>
-          <iconify-icon icon="ph:arrow-square-out-bold" width="16"></iconify-icon>
-        </a>
-      </div>
-    </div>
-  `;
-}
 
 
 
