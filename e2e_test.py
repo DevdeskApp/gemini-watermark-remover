@@ -46,9 +46,8 @@ def run_tests():
         r"MONETAG",
         r"handleDownloadAd",
         r"handleExportAd",
-        r"isharamadushankab@gmail\.com",
-        r"ishara\.madu",
-        r"ishara-madu",
+        r"popads",
+        r"adsterra",
         r"online-image-converter"
     ]
 
