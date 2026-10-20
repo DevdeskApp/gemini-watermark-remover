@@ -523,38 +523,82 @@
   </header>
 
   <main class="container">
+    <!-- Hero Ambient Glow Backdrop -->
+    <div class="hero-glow-backdrop" aria-hidden="true"></div>
+
     <!-- Hero Section -->
     <div class="hero-section">
-      <h1 class="hero-title">Free Gemini Watermark Remover &amp; Logo Remover</h1>
+      <!-- Modern Top AI Announcement Pill -->
+      <div class="hero-top-badge">
+        <span class="badge-dot-glow"></span>
+        <iconify-icon icon="ph:sparkle-fill" width="14" class="badge-sparkle-icon"></iconify-icon>
+        <span class="badge-text">Next-Gen AI Watermark Engine 2026</span>
+        <span class="badge-chip">Zero Quality Loss</span>
+      </div>
+
+      <h1 class="hero-title">
+        Free <span class="gradient-text-hero">Gemini Watermark</span> &amp; Logo Remover
+      </h1>
       <p class="hero-description">
         Easily clean visible watermark logos from Gemini Omni, Google Flow, and Veo AI videos, as well as Gemini image generations. Fast, 100% private in-browser processing with maximum visual fidelity.
       </p>
+
       <div class="hero-badges">
-        <span class="hero-badge-pill"><iconify-icon icon="ph:sparkle-bold" width="15"
+        <span class="hero-badge-pill badge-pill-free"><iconify-icon icon="ph:sparkle-bold" width="15"
             style="color: #059669;"></iconify-icon> 100% Free Gemini Watermark Remover</span>
         <span class="hero-badge-pill"><iconify-icon icon="ph:image-square-bold" width="15"
             style="color: #2563eb;"></iconify-icon> Gemini &amp; Nano Banana Images</span>
         <a href="#panel-video" class="hero-badge-pill hero-badge-link" id="hero-badge-video-link"><iconify-icon
             icon="ph:video-camera-bold" width="15" style="color: #7c3aed;"></iconify-icon> Gemini Video Watermark
-          Remover</a>
+          Remover <iconify-icon icon="ph:arrow-right-bold" width="12" class="pill-arrow"></iconify-icon></a>
         <span class="hero-badge-pill"><iconify-icon icon="ph:shield-check-bold" width="15"
             style="color: #0d9488;"></iconify-icon> Private &amp; High Fidelity</span>
       </div>
-    </div>
 
-    <!-- Left Decorative Background Frame -->
-    <div class="hero-bg-frame-container left" aria-hidden="true">
-      <div class="hero-bg-frame">
-        <img src="./assets/gemini-watermark-remover-preview-left.webp" alt="Gemini AI generated fluid artwork sample" class="hero-bg-img" width="250"
-          height="250" loading="lazy" decoding="async" fetchpriority="low" />
+      <!-- Mobile & Tablet Visual Showcase Strip (<= 1100px) -->
+      <div class="hero-mobile-showcase" aria-hidden="true">
+        <div class="mobile-showcase-pill">
+          <img src="./assets/gemini-watermark-remover-preview-left.webp" alt="Gemini AI generated fluid artwork sample" width="30" height="30" class="mobile-showcase-thumb" />
+          <span class="mobile-showcase-label">Gemini Imagen 3</span>
+          <span class="mobile-chip">Cleaned</span>
+        </div>
+        <div class="mobile-showcase-pill">
+          <img src="./assets/veo-video-watermark-cleaner-preview-right.webp" alt="AI generated vibrant artwork sample" width="30" height="30" class="mobile-showcase-thumb" />
+          <span class="mobile-showcase-label">Veo 3 AI Video</span>
+          <span class="mobile-chip">60 FPS</span>
+        </div>
       </div>
     </div>
 
-    <!-- Right Decorative Background Frame -->
+    <!-- Left Decorative Floating Showcase Card (Desktop) -->
+    <div class="hero-bg-frame-container left" aria-hidden="true">
+      <div class="hero-bg-frame hero-card-animated left-float">
+        <div class="hero-img-wrap">
+          <img src="./assets/gemini-watermark-remover-preview-left.webp" alt="Gemini AI generated fluid artwork sample" class="hero-bg-img" width="260"
+            height="260" loading="lazy" decoding="async" fetchpriority="low" />
+          <div class="hero-card-glass-tag">
+            <span class="tag-status-dot"></span>
+            <iconify-icon icon="ph:sparkle-fill" width="13"></iconify-icon>
+            <span class="tag-name">Gemini Imagen 3</span>
+            <span class="tag-badge">Cleaned</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Decorative Floating Showcase Card (Desktop) -->
     <div class="hero-bg-frame-container right" aria-hidden="true">
-      <div class="hero-bg-frame">
-        <img src="./assets/veo-video-watermark-cleaner-preview-right.webp" alt="AI generated vibrant artwork sample" class="hero-bg-img"
-          width="350" height="350" loading="lazy" decoding="async" fetchpriority="low" />
+      <div class="hero-bg-frame hero-card-animated right-float">
+        <div class="hero-img-wrap">
+          <img src="./assets/veo-video-watermark-cleaner-preview-right.webp" alt="AI generated vibrant artwork sample" class="hero-bg-img"
+            width="350" height="350" loading="lazy" decoding="async" fetchpriority="low" />
+          <div class="hero-card-glass-tag">
+            <span class="tag-status-dot green"></span>
+            <iconify-icon icon="ph:video-camera-fill" width="13"></iconify-icon>
+            <span class="tag-name">Veo 3 &amp; Flow</span>
+            <span class="tag-badge">60 FPS Lossless</span>
+          </div>
+        </div>
       </div>
     </div>
 
