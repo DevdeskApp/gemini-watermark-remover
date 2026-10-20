@@ -47,7 +47,9 @@ def run_tests():
         r"handleDownloadAd",
         r"handleExportAd",
         r"isharamadushankab@gmail\.com",
-        r"ishara\.madu"
+        r"ishara\.madu",
+        r"ishara-madu",
+        r"online-image-converter"
     ]
 
     for root, dirs, files in os.walk(BASE_DIR):
