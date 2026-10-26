@@ -200,14 +200,12 @@ def run_tests():
 
         with open(sitemap_path, 'r', encoding='utf-8') as f:
             sm_raw = f.read()
-        if '<changefreq>monthly</changefreq>' in sm_raw:
-            print("  [ERROR] sitemap.xml still contains 'monthly' changefreq! Expected weekly.")
+        # Google ignores <changefreq> and <priority>; it only uses an accurate <lastmod>.
+        if len(re.findall(r'<lastmod>\d{4}-\d{2}-\d{2}</lastmod>', sm_raw)) != len(urls):
+            print("  [ERROR] sitemap.xml: every URL needs a <lastmod> date (YYYY-MM-DD).")
             errors += 1
-        elif '<changefreq>weekly</changefreq>' in sm_raw:
-            print("  [OK] sitemap.xml changefreq updated to 'weekly' across all pages.")
         else:
-            print("  [ERROR] sitemap.xml missing 'weekly' changefreq tag.")
-            errors += 1
+            print("  [OK] sitemap.xml has a <lastmod> date on every URL.")
     except Exception as e:
         print(f"  [ERROR] sitemap.xml parsing error: {e}")
         errors += 1

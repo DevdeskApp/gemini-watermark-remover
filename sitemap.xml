@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://gemini-watermark-remover.devdeskapp.com/</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-20</lastmod>
     <image:image>
       <image:loc>https://gemini-watermark-remover.devdeskapp.com/assets/gemini-watermark-remover-logo.webp</image:loc>
       <image:title>Free Gemini Watermark Remover &amp; Logo Remover - DevDeskApp</image:title>
@@ -21,32 +18,22 @@
   </url>
   <url>
     <loc>https://gemini-watermark-remover.devdeskapp.com/about.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-27</lastmod>
   </url>
   <url>
     <loc>https://gemini-watermark-remover.devdeskapp.com/contact.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://gemini-watermark-remover.devdeskapp.com/privacy-policy.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-10-27</lastmod>
   </url>
   <url>
     <loc>https://gemini-watermark-remover.devdeskapp.com/terms-of-service.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://gemini-watermark-remover.devdeskapp.com/disclaimer.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-10-27</lastmod>
   </url>
 </urlset>
