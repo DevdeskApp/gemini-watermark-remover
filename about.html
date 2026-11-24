@@ -27,7 +27,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us – Gemini Watermark Remover</title>
   <meta name="description"
-    content="The story and technology behind Gemini Watermark Remover: how mathematical alpha unblending enables private, lossless in-browser watermark removal." />
+    content="The story and technology behind Gemini Watermark Remover: how mathematical alpha unblending enables private, in-browser watermark removal without AI blur." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="DevDeskApp" />
   <meta name="theme-color" content="#ffffff" />
@@ -469,9 +469,9 @@
         </p>
         <ul>
           <li><strong>WebCodecs API:</strong> Grants direct low-level access to hardware video decoders and encoders directly in Chrome, Edge, and modern browsers.</li>
-          <li><strong>HTML5 Canvas &amp; OffscreenCanvas:</strong> Enables multi-threaded pixel manipulation via dedicated Web Workers.</li>
-          <li><strong>MP4Box.js:</strong> Fast, in-memory ISO BMFF demuxer and container parser for MP4, WebM, and MOV containers.</li>
-          <li><strong>Web Audio API:</strong> Captures and reconstructs lossless multi-channel PCM and AAC audio streams.</li>
+          <li><strong>HTML5 Canvas:</strong> Reads and writes the pixels of each image and video frame for the unblending maths.</li>
+          <li><strong>Mediabunny:</strong> An open source library that reads MP4, WebM and MOV files and writes the cleaned H.264 MP4 output.</li>
+          <li><strong>Audio passthrough:</strong> The main audio track of your video is copied into the new MP4 so sound stays in sync.</li>
         </ul>
       </section>
 
@@ -525,6 +525,9 @@
           <h3>Quick Links</h3>
           <ul>
             <li><a href="/#how-it-works">How It Works</a></li>
+            <li><a href="./nano-banana-watermark-remover.html">Nano Banana Watermark Remover</a></li>
+            <li><a href="./veo-watermark-remover.html">Veo 3 Watermark Remover</a></li>
+            <li><a href="./gemini-omni-watermark-remover.html">Gemini Omni Watermark Remover</a></li>
             <li><a href="/#faq">FAQ</a></li>
             <li><a href="./about.html">About Us</a></li>
             <li><a href="./contact.html">Contact Support</a></li>
