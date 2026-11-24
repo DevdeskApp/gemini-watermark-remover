@@ -438,6 +438,14 @@ class VideoWatermarkEngine {
   }
 }
 
+// Download name for the cleaned file: keep the original base name, use the real output
+// extension (images are always PNG, videos always MP4) and strip characters that could
+// break out of the HTML attribute.
+function cleanFileName(originalName, ext) {
+  const base = String(originalName || 'file').replace(/\.[^.]+$/, '').replace(/[^\w\- .()]+/g, '_').slice(0, 80) || 'file';
+  return `clean_${base}.${ext}`;
+}
+
 // ── 4. App Controller & Event Handlers ──
 let currentTab = 'image';
 let watermarkEngine = null;
@@ -1420,7 +1428,7 @@ function initImageRemover() {
             </div>
           </div>
           <div class="mt-4 text-center">
-            <a href="${url}" download="clean_${currentFile.name}" class="btn btn-primary">
+            <a href="${url}" download="${cleanFileName(currentFile.name, 'png')}" class="btn btn-primary">
               <iconify-icon icon="ph:download-simple-bold" width="16"></iconify-icon>
               Download Cleaned PNG
             </a>
@@ -1890,7 +1898,7 @@ function initVideoRemover() {
             </div>
           </div>
           <div class="mt-4 text-center">
-            <a href="${res.url}" download="clean_${currentFile.name}" class="btn btn-primary">
+            <a href="${res.url}" download="${cleanFileName(currentFile.name, 'mp4')}" class="btn btn-primary">
               <iconify-icon icon="ph:download-simple-bold" width="16"></iconify-icon>
               Download Cleaned Video MP4
             </a>

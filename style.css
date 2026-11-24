@@ -4463,3 +4463,77 @@ body[data-theme="dark"],
   }
 }
 
+
+/* ============ Guide landing pages (nano-banana / veo / gemini-omni) ============ */
+.guide-quick {
+  border: 1px solid var(--bg-card-border);
+  border-left: 4px solid var(--brand-primary);
+  background: var(--brand-glow);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 2rem;
+}
+.guide-quick-label {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--brand-primary); margin-bottom: 0.4rem;
+}
+.guide-quick p { margin: 0 0 0.75rem; font-size: 1rem; line-height: 1.65; color: var(--text-main); }
+.guide-facts { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.guide-fact {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  font-size: 0.8rem; font-weight: 600; color: var(--text-main);
+  background: var(--bg-card); border: 1px solid var(--bg-card-border);
+  border-radius: 999px; padding: 0.3rem 0.7rem;
+}
+.guide-fact iconify-icon { color: var(--accent-green); }
+
+.legal-section ol.guide-steps { list-style: none; margin: 1rem 0; padding: 0; counter-reset: gstep; display: grid; gap: 0.75rem; }
+.legal-section ol.guide-steps > li {
+  counter-increment: gstep; position: relative; margin: 0;
+  padding: 0.9rem 1rem 0.9rem 3.4rem;
+  background: var(--bg-card); border: 1px solid var(--bg-card-border);
+  border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
+}
+.legal-section ol.guide-steps > li::before {
+  content: counter(gstep);
+  position: absolute; left: 0.9rem; top: 0.85rem;
+  width: 1.8rem; height: 1.8rem; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--brand-primary); color: #fff; font-weight: 700; font-size: 0.85rem;
+}
+
+.guide-table-wrap { overflow-x: auto; margin: 1rem 0 1.25rem; border: 1px solid var(--bg-card-border); border-radius: var(--radius-md); }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; min-width: 520px; }
+.guide-table th, .guide-table td { padding: 0.65rem 0.85rem; text-align: left; border-bottom: 1px solid var(--bg-card-border); color: var(--text-main); }
+.guide-table th { background: var(--brand-glow); font-weight: 700; font-size: 0.8rem; }
+.guide-table tbody tr:last-child td { border-bottom: none; }
+.guide-table tbody tr:nth-child(even) td { background: rgba(127, 127, 127, 0.04); }
+.guide-table td:first-child { font-weight: 600; }
+
+.guide-cta-card {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.9rem;
+  margin: 1.25rem 0 0.5rem; padding: 1rem 1.15rem;
+  border-radius: var(--radius-lg); border: 1px dashed var(--brand-primary);
+  background: var(--bg-card);
+}
+.guide-cta-card div { display: flex; flex-direction: column; gap: 0.15rem; }
+.guide-cta-card div span { font-size: 0.85rem; color: var(--text-muted); }
+.guide-cta-card .btn { color: #fff; font-weight: 600; }
+
+.guide-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin-top: 0.75rem; }
+.guide-link-card {
+  display: flex; align-items: center; gap: 0.75rem; padding: 0.85rem 1rem;
+  border: 1px solid var(--bg-card-border); border-radius: var(--radius-md);
+  background: var(--bg-card); color: var(--text-main); text-decoration: none;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.guide-link-card:hover { transform: translateY(-2px); border-color: var(--brand-primary); box-shadow: var(--shadow-md); }
+.guide-link-card iconify-icon { color: var(--brand-primary); flex-shrink: 0; }
+.guide-link-card span { display: flex; flex-direction: column; }
+.guide-link-card small { color: var(--text-muted); font-size: 0.8rem; }
+[data-theme="dark"] .guide-quick p, [data-theme="dark"] .guide-steps li { color: var(--text-light); }
+.guide-home-section { max-width: 1100px; margin: 3rem auto; padding: 0 1rem; }
+.guide-home-title { font-size: 1.6rem; font-weight: 700; color: var(--text-main); text-align: center; margin-bottom: 0.4rem; }
+.guide-home-sub { text-align: center; color: var(--text-muted); margin-bottom: 1.25rem; }
+[data-theme="dark"] .legal-section p, [data-theme="dark"] .legal-section ul, [data-theme="dark"] .legal-section ol { color: var(--text-light); }

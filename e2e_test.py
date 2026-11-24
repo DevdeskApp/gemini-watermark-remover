@@ -190,12 +190,12 @@ def run_tests():
         root = tree.getroot()
         ns = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
         urls = root.findall('.//ns:loc', ns) or root.findall('.//loc')
-        if len(urls) == 6:
+        if len(urls) == len(html_files):
             print(f"  [OK] sitemap.xml contains all {len(urls)} registered site pages:")
             for u in urls:
                 print(f"       -> {u.text}")
         else:
-            print(f"  [ERROR] Expected 6 URLs in sitemap, found {len(urls)}")
+            print(f"  [ERROR] Expected {len(html_files)} URLs in sitemap, found {len(urls)}")
             errors += 1
 
         with open(sitemap_path, 'r', encoding='utf-8') as f:
