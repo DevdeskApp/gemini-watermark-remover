@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gemini-watermark-remover-v2';
+const CACHE_NAME = 'gemini-watermark-remover-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

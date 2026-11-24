@@ -3,14 +3,16 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJJ0XRV91T"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-63YJ4Y9W27"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-GJJ0XRV91T');
-    gtag('config', 'G-63YJ4Y9W27');
+    // G-GJJ0XRV91T lives inside the G-63YJ4Y9W27 Google tag (its own loader 404s),
+    // so load that tag but route every hit to this site's property only.
+    gtag('config', 'G-63YJ4Y9W27', { send_page_view: false });
+    gtag('event', 'page_view', { send_to: 'G-GJJ0XRV91T' });
   </script>
   <!-- Early Theme Initializer (Prevents FOUC) -->
   <script>
